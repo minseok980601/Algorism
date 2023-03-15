@@ -31,7 +31,14 @@ public class Q4 {
 		copy(a, b);
 		
 		for(int i = 0; i < na; i++) {
-			System.out.print(a[i]);
+			System.out.println(a[i]);
+		}
+		
+		System.out.println("b의 모든 요소를 a역순으로 복사");
+		rcopy(a, b);
+		
+		for(int i = 0 ; i < na; i++) {
+			System.out.println(a[i]);
 		}
 	}
 	
@@ -39,6 +46,14 @@ public class Q4 {
 		int num = a.length <= b.length ? a.length : b.length;
 		for(int i = 0; i < num; i++) {
 				a[i] = b[i];
+		}
+	}
+	
+	static void rcopy(int[] a, int[] b) {
+		int num = a.length <= b.length ? a.length : b.length;
+		for(int i = 0; i < num; i++) {
+			a[i] = b[b.length - i - 1];
+
 		}
 	}
 }
